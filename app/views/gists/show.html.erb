@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Snippet:</b>
+  <%= @gist.snippet %>
+</p>
+
+<p>
+  <b>Lexer:</b>
+  <%= @gist.lexer %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @gist.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_gist_path(@gist) %> |
+<%= link_to 'Back', gists_path %>
