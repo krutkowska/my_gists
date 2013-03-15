@@ -1,6 +1,9 @@
-<h1>Listing gists</h1>
+<%#opakowanie całości w kontener%>
+<section class="container">
 
-<table>
+<h1>Listing gists</h1>
+<table class="table table-striped">
+<%#bootstrapowa tabela w "zebrę" %>
   <tr>
     <th>Snippet</th>
     <th>Lexer</th>
@@ -15,13 +18,14 @@
     <td><%= gist.snippet %></td>
     <td><%= gist.lexer %></td>
     <td><%= gist.description %></td>
-    <td><%= link_to 'Show', gist %></td>
-    <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
-    <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <%# bootstrapowe przyciski %>
+    <td><%= link_to 'Show', gist, :class=>'btn btn-success'%></td>
+    <td><%= link_to 'Edit', edit_gist_path(gist), :class=>'btn btn-info' %></td>
+    <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, :class=>'btn btn-danger' %></td>
+</tr>
+
 <% end %>
 </table>
+<%= link_to 'New Gist', new_gist_path, :class=>'btn btn-inverse'%>
+</section>
 
-<br />
-
-<%= link_to 'New Gist', new_gist_path %>

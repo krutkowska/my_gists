@@ -1,6 +1,9 @@
+<%#opakowanie całości w kontener%>
+<section class='container'>
 <h1>Editing gist</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @gist %> |
-<%= link_to 'Back', gists_path %>
+<%#bootstrapowe przyciski%>
+<%= link_to 'Show', @gist, :class=>'btn btn-success' %>
+<%= link_to 'Back', gists_path, :class=>'btn btn-info'%>
+</section>

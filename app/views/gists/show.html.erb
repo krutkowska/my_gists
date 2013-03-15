@@ -1,20 +1,22 @@
-<p id="notice"><%= notice %></p>
+<%#opakowanie całości w kontener%>
+<section class='container'>
+<br>
+<%#jeśli istnieje jakieś powiadomienie - wyświetl jako bootstrapowy alert-success%>
+<% if notice %>
+<p class='alert alert-success'><%= notice %></p>
+<% end %>
+<dl>
+  <dt>Snippet:</dt>
+  <dd>
+	  <pre><%= @gist.snippet %></pre>
+  </dd>
+  <dt>Lexer:</dt>
+  <dd><%= @gist.lexer %></dd>
+  <dt>Description:</dt>
+  <dd><%= @gist.description %><dd>
+</dl>
 
-<p>
-  <b>Snippet:</b>
-  <%= @gist.snippet %>
-</p>
-
-<p>
-  <b>Lexer:</b>
-  <%= @gist.lexer %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @gist.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_gist_path(@gist) %> |
-<%= link_to 'Back', gists_path %>
+<%#bootstrapowe przyciski%>
+<%= link_to 'Edit', edit_gist_path(@gist), :class=>'btn btn-info'%> 
+<%= link_to 'Back', gists_path ,:class=>'btn btn-success'%>
+</section>
