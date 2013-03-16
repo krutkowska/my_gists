@@ -1,10 +1,12 @@
 <%#opakowanie całości w kontener%>
 <section class='container'>
+<% title 'Show' %>
 <br>
 <%#jeśli istnieje jakieś powiadomienie - wyświetl jako bootstrapowy alert-success%>
 <% if notice %>
 <p class='alert alert-success'><%= notice %></p>
 <% end %>
+
 <dl>
   <dt>Snippet:</dt>
   <dd>
@@ -17,6 +19,7 @@
 </dl>
 
 <%#bootstrapowe przyciski%>
+<%# raw Pygments.highlight(@gist.snippet, lexer: @gist.lexer) %>
 <%= link_to 'Edit', edit_gist_path(@gist), :class=>'btn btn-info'%> 
 <%= link_to 'Back', gists_path ,:class=>'btn btn-success'%>
 </section>
