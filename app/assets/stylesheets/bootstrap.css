@@ -639,6 +639,7 @@ h3 {
   line-height: 40px;
 }
 h1 {
+  margin-top:  40px;		
   font-size: 38.5px;
   color: #12328e;
 }
