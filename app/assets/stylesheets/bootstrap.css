@@ -208,8 +208,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333333;
-  background-color: #ffffff;
+  color: #122250;
+  background-color: #e8e6b6;
 }
 a {
   color: #0088cc;
@@ -640,6 +640,7 @@ h3 {
 }
 h1 {
   font-size: 38.5px;
+  color: #12328e;
 }
 h2 {
   font-size: 31.5px;
@@ -962,6 +963,7 @@ table {
 }
 .table th {
   font-weight: bold;
+  color: #12328e;
 }
 .table thead th {
   vertical-align: bottom;
@@ -1209,6 +1211,7 @@ textarea {
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
+  color: #12328e;
 }
 input,
 button,
@@ -1219,6 +1222,7 @@ textarea {
 label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 select,
 textarea,
