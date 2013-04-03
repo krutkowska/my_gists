@@ -13,6 +13,8 @@ gem 'sqlite3'
 group :assets do
 gem 'thin'
 gem 'pygments.rb'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 gem 'redcarpet'
 group :development do
   gem 'quiet_assets'
