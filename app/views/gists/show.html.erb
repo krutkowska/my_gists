@@ -1,3 +1,7 @@
+<% require 'pygments' %>
+<style type="text/css">
+	<%= Pygments.css(style: "colorful") %>
+</style>
 <%#opakowanie całości w kontener%>
 <section class='container'>
 <% title 'Show' %>
@@ -6,11 +10,10 @@
 <% if notice %>
 <p class='alert alert-success'><%= notice %></p>
 <% end %>
-
 <dl>
   <dt>Snippet</dt>
   <dd>
-	  <pre><%= @gist.snippet %></pre>
+	  <%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lexer) %>
   </dd>
   <dt>Lexer</dt>
   <dd><%= @gist.lexer %></dd>
