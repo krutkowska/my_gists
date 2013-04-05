@@ -1,6 +1,13 @@
 class GistsController < ApplicationController
   # GET /gists
   # GET /gists.json
+  before_filter :get_user
+  before_filter :authenticate_user!, :only => [:new,:edit,:create,:upate,:destroy]
+  
+  def get_user
+    @current_user = current_user
+  end
+  
   def index
     # @gists = Gist.all
     @gists = Gist.paginate(:page => params[:page], :per_page => 5)
@@ -35,12 +42,14 @@ class GistsController < ApplicationController
 
   # GET /gists/1/edit
   def edit
+    authenticate_user!
     @gist = Gist.find(params[:id])
   end
 
   # POST /gists
   # POST /gists.json
   def create
+    authenticate_user!
     @gist = Gist.new(params[:gist])
 
     respond_to do |format|
@@ -57,6 +66,7 @@ class GistsController < ApplicationController
   # PUT /gists/1
   # PUT /gists/1.json
   def update
+    authenticate_user!
     @gist = Gist.find(params[:id])
 
     respond_to do |format|
@@ -73,6 +83,7 @@ class GistsController < ApplicationController
   # DELETE /gists/1
   # DELETE /gists/1.json
   def destroy
+    authenticate_user!
     @gist = Gist.find(params[:id])
     @gist.destroy
 

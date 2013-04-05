@@ -8,7 +8,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="navbar">
+	    <div class="navbar-inner">
+	    	<% if @current_user %>
+				<%= link_to 'Gists', gists_path, :class=>'brand'%>
+			    <ul class="nav">
+			    	<li><%= link_to('Logout ('+current_user.email+')', destroy_user_session_path, :method => :delete) %>   </li>
+			    </ul>
+			<% else %>
+				<ul class="nav">
+			    	<li><%= link_to('Login', new_user_session_path)  %>   </li>
+			    </ul>
+			<% end %>
+	    </div>
+</div>
 <%= yield %>
 
 </body>

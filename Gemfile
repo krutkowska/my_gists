@@ -16,6 +16,8 @@ gem 'pygments.rb'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'redcarpet'
+gem 'devise'
+gem 'cancan'
 group :development do
   gem 'quiet_assets'
 end
