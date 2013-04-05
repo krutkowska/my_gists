@@ -42,14 +42,12 @@ class GistsController < ApplicationController
 
   # GET /gists/1/edit
   def edit
-    authenticate_user!
     @gist = Gist.find(params[:id])
   end
 
   # POST /gists
   # POST /gists.json
   def create
-    authenticate_user!
     @gist = Gist.new(params[:gist])
 
     respond_to do |format|
@@ -66,7 +64,6 @@ class GistsController < ApplicationController
   # PUT /gists/1
   # PUT /gists/1.json
   def update
-    authenticate_user!
     @gist = Gist.find(params[:id])
 
     respond_to do |format|
@@ -83,7 +80,6 @@ class GistsController < ApplicationController
   # DELETE /gists/1
   # DELETE /gists/1.json
   def destroy
-    authenticate_user!
     @gist = Gist.find(params[:id])
     @gist.destroy
 
