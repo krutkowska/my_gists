@@ -13,7 +13,7 @@ gem 'pg'
 group :assets do
 # gem 'thin'
 gem 'pygments.rb'
-gem 'will_paginate'
+gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'redcarpet'
 gem 'devise'
