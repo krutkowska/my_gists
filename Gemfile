@@ -11,7 +11,7 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-gem 'thin'
+# gem 'thin'
 gem 'pygments.rb'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
