@@ -13,7 +13,13 @@
 <dl>
   <dt>Snippet</dt>
   <dd>
-	  <%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lexer) %>
+	  <%=
+	  	begin
+			raw Pygments.highlight(@gist.snippet, lexer: @gist.lexer) 
+		rescue Exception=>e
+			raw("<pre>")+@gist.snippet+raw("</pre>")
+		end  
+	  %>
   </dd>
   <dt>Lexer</dt>
   <dd><%= @gist.lexer %></dd>
