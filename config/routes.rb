@@ -1,8 +1,8 @@
 MyGists::Application.routes.draw do
   devise_for :users
-
-  resources :gists 
-  
+ resources :gists
+ 
+root :to => 'gists#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
